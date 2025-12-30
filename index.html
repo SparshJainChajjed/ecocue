@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarbonCue – Unified Carbon Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0D1B1E">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/icon-192x192.png" alt="CarbonCue logo" width="32" height="32">
+      <span>CarbonCue</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#upload">Data</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#analysis">Analysis</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Understand and Reduce Your Organization’s Carbon Footprint</h1>
+    <p>Most organizations want to reduce emissions, but data lives in silos across electricity bills, transport logs, waste records and suppliers. CarbonCue unifies this data into a single dashboard, calculates emissions using standard EPA/IPCC factors and gives clear cues on where and how to act.</p>
+    <button id="get-started" class="primary-btn">Get Started</button>
+  </section>
+
+  <section id="upload" class="section">
+    <h2>Upload Carbon Data</h2>
+    <p>Upload a CSV file containing your organization’s activity data. Each row should contain <strong>Date</strong> (YYYY‑MM‑DD), <strong>Department</strong>, <strong>Category</strong> (e.g., electricity, transport_car, transport_bus, transport_train, transport_flight, waste), <strong>Unit</strong> (kWh, km, kg), and <strong>Amount</strong>. You can also load a sample dataset to explore the dashboard.</p>
+    <input type="file" id="data-file" accept=".csv">
+    <button id="load-sample" class="secondary-btn">Load Sample Data</button>
+  </section>
+
+  <section id="dashboard" class="section hidden">
+    <h2>Dashboard</h2>
+    <div id="summary" class="summary-cards"></div>
+    <div class="charts">
+      <div class="chart-block">
+        <h3>Emissions by Department</h3>
+        <div id="dept-bars" class="bar-chart"></div>
+      </div>
+      <div class="chart-block">
+        <h3>Emissions by Category</h3>
+        <div id="cat-bars" class="bar-chart"></div>
+      </div>
+    </div>
+    <div class="chart-block">
+      <h3>Trends Over Time</h3>
+      <canvas id="trend-chart" width="800" height="300"></canvas>
+    </div>
+  </section>
+
+  <section id="analysis" class="section hidden">
+    <h2>Reduction Cues</h2>
+    <div id="analysis-content" class="analysis-content"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 CarbonCue. Bringing clarity to carbon.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

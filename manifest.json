@@ -1,0 +1,21 @@
+{
+  "name": "CarbonCue Dashboard",
+  "short_name": "CarbonCue",
+  "start_url": ".",
+  "display": "standalone",
+  "description": "CarbonCue unifies carbon data across electricity, transport, waste and more, visualising trends and providing reduction cues.",
+  "background_color": "#0D1B1E",
+  "theme_color": "#29d17c",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
